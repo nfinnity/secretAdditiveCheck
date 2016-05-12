@@ -15,7 +15,7 @@ public class AdditiveChecker {
                     System.out.println("Inappropriate input. Please input a positive integer.");
                     System.exit(0);
                 }
-                else if (input == 1)
+                else if ((input == 1) || (input == 2))
                 {
                     System.out.println("No prime numbers in list.");
                     System.exit(0);
