@@ -1,6 +1,6 @@
 ## secretAdditiveCheck
 
-###Description
+### Description
 The description and requirements were given as follows:
 ```
 You are given a function 'secret()' that accepts a single integer parameter and returns an integer. 
@@ -10,10 +10,10 @@ for all combinations x and y, where x and y are all prime numbers less than the 
 command-line argument.  Describe how to run your examples. Please generate the list of primes without 
 using built-in functionality.
 ```
-###Solution
+### Solution
 The solution for this problem was broken up into three main sections: finding primes, finding combinations, and determining if each combination is additive.
 
-####Finding Primes
+#### Finding Primes
 In order to find prime numbers, a rule was used that all non-prime numbers are made up of factors of 2, 3, 5, and 7.
 Any values that are not divisible by these value (and are not these values) is considered to be prime. 
 The for loop:
@@ -32,7 +32,7 @@ for (int i = 2; i < input; i++)
 ```
 Goes through each value up until the max value, and checks its remainder with values 2, 3, 5, and 7. When there is no remainder and the value does not equal the divisor, then that value is prime. The prime number is then added to the ArrayList of prime integers.
 
-####Finding Combinations and secret() Call
+#### Finding Combinations and secret() Call
 All combinations of the generated list of primes is then checked with the secret() function to check whether that combination is additive. The for loop below was written in such a way that avoids the inefficiency of rechecking already-checked combinations.
 ```
 for (int i = 0; i < primes.size(); i++)
@@ -51,7 +51,7 @@ for (int i = 0; i < primes.size(); i++)
 If a false is detected, then the function is not additive and the false is returned (exiting the loop).
 If all combinations have been checked and are additive, then the function is considered as additive.
 
-####secret() Function
+#### secret() Function
 The secret() function is the undefined function that the program is checking in whether or not it is additive.
 It accepts a single integer parameter and returns an integer. For this project, the default function returns
 the same value that it was sent.
@@ -62,10 +62,10 @@ private static int secret(int value)
 }
 ```
 
-###Examples
+### Examples
 A number of functions were tested in order to assure the validity of the program. The following examples were tested
 and their results given.
-#####secret() Function 1
+##### secret() Function 1
 ```
 private static int secret(int value)
 {
@@ -80,7 +80,7 @@ secret1 = secret(9+2) --> Returns 9+2 or 13
 secret2 = secret(9) + secret(2) --> Returns 9+2 or 13
 (9+2) = 9 + 2
 ```
-#####secret() Function 2
+##### secret() Function 2
 ```
 private static int secret(int value)
 {
@@ -92,7 +92,7 @@ This returns that the function **is not** additive, and this is because this ess
 (1) = (1) + (1)
 ```
 
-###How to Run from Windows Command Line
+### How to Run from Windows Command Line
 
 ```
 Note: This program requires a Java JRE or JDK in order to run it from Windows command line.
